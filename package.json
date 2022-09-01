@@ -2,10 +2,10 @@
   "name": "nodejs-be-playground",
   "version": "1.0.0",
   "description": "just nodejs playground to build a RESTFUL API",
-  "main": "app.mjs",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.mjs",
-    "prod": "node app.mjs"
+    "dev": "nodemon --experimental-modules app.mjs",
+    "prod": "node --experimental-modules app.mjs"
   },
   "author": "",
   "license": "ISC",

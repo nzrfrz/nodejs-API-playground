@@ -3,6 +3,11 @@ import express from "express";
 import dotenv from "dotenv";
 import DB from "./db.config.mjs";
 
+// const cors = require("cors");
+// const express = require("express");
+// const dotenv = require("dotenv");
+// const { DB } = require("./db.config.js");
+
 dotenv.config();
 const app = express();
 
