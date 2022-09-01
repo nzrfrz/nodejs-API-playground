@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 
 dotenv.config();
 
-const MONGO_DB_URL = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@playgroundcluster.0iljkjc.mongodb.net/?retryWrites=true&w=majority`;
+const MONGO_DB_URL = process.env.MONGODB_URI;
 
 mongoose.Promise = global.Promise;
 
