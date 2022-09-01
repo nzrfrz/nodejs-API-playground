@@ -2,6 +2,7 @@
   "name": "nodejs-be-playground",
   "version": "1.0.0",
   "description": "just nodejs playground to build a RESTFUL API",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
