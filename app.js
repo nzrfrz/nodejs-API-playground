@@ -1,7 +1,7 @@
 import cors from "cors";
 import express from "express";
 import dotenv from "dotenv";
-import DB from "./db.config.mjs";
+import DB from "./db.config.js";
 
 // const cors = require("cors");
 // const express = require("express");
