@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "just nodejs playground to build a RESTFUL API",
   "main": "app.js",
-  "type": "module",
   "scripts": {
     "dev": "nodemon app.js",
     "prod": "node app.js"
