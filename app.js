@@ -35,6 +35,6 @@ app.get("/", (req, res) => {
     res.send("!!! NODEJS BACKEND WITH MONGO DATABASE PLAYGROUND !!!")
 });
 
-app.listen(process.env.APP_PORT, () => {
-    console.log(`App Running on: http://localhost:${process.env.APP_PORT}`);
+app.listen(process.env.PORT, () => {
+    console.log(`App Running on: http://localhost:${process.env.PORT}`);
 });
