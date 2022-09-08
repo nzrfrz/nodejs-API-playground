@@ -1,12 +1,10 @@
 import cors from "cors";
 import express from "express";
+import useragent from "express-useragent";
 import dotenv from "dotenv";
 import DB from "./db.config.js";
 
-// const cors = require("cors");
-// const express = require("express");
-// const dotenv = require("dotenv");
-// const { DB } = require("./db.config.js");
+import { BlogPost } from "./src/routes/index.js";
 
 dotenv.config();
 const app = express();
@@ -17,6 +15,7 @@ let corsOptions = {
 
 app.use(express.json());
 app.use(cors(corsOptions));
+app.use(useragent.express());
 app.use(express.urlencoded({ extended: true }));
 
 DB.mongoose
@@ -31,9 +30,11 @@ DB.mongoose
         console.log("Can't connect to database", error);
     });
 
-app.get("/", (req, res) => {
-    res.send("!!! NODEJS BACKEND WITH MONGO DATABASE PLAYGROUND !!!")
+app.get("/playground", (req, res) => {
+    res.send("!!! NODEJS BACKEND PLAYGROUND WITH MONGODB !!!");
 });
+
+BlogPost(app);
 
 app.listen(process.env.PORT, () => {
     console.log(`App Running on: http://localhost:${process.env.PORT}`);

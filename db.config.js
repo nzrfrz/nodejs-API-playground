@@ -1,8 +1,7 @@
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 
-// const dotenv = require("dotenv");
-// const mongoose = require("mongoose");
+import { BlogPostInit } from "./src/models/blogPost/blogPost.model.js";
 
 dotenv.config();
 
@@ -14,10 +13,8 @@ let db = {};
 db.mongoose = mongoose;
 db.url = MONGO_DB_URL;
 
-const DB = db;
+db.blog_posts = BlogPostInit(mongoose);
 
-// module.exports = {
-//     DB,
-// }
+const DB = db;
 
 export default DB;
