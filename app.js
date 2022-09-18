@@ -27,7 +27,7 @@ console.log('directory-name 👉️', path.join(__dirname, '/public/images'));
 app.use(express.json());
 app.use(cors(corsOptions));
 app.use(useragent.express());
-app.use(express.static(__dirname+'/public'));
+app.use(express.static("public/images"));
 app.use(express.urlencoded({ extended: true }));
 
 DB.mongoose
