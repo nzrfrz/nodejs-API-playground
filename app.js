@@ -44,7 +44,7 @@ DB.mongoose
 
 app.get("/playground/test", (req, res) => {
     console.log(req.host);
-    res.status(200).send("!!! NODEJS BACKEND PLAYGROUND WITH MONGODB !!!");
+    res.status(200).send({message: "!!! NODEJS BACKEND PLAYGROUND WITH MONGODB !!!"});
 });
 
 BlogPost(app);
