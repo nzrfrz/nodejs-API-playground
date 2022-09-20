@@ -43,6 +43,7 @@ DB.mongoose
     });
 
 app.get("/playground", (req, res) => {
+    console.log(req.host);
     res.status(200).send("!!! NODEJS BACKEND PLAYGROUND WITH MONGODB !!!");
 });
 
