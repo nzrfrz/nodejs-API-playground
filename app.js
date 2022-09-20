@@ -42,7 +42,7 @@ DB.mongoose
         console.log("Can't connect to database", error);
     });
 
-app.get("/playground", (req, res) => {
+app.get("/playground/test", (req, res) => {
     console.log(req.host);
     res.status(200).send("!!! NODEJS BACKEND PLAYGROUND WITH MONGODB !!!");
 });
